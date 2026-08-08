@@ -28,6 +28,10 @@
       contactName: "",          // e.g. "Jane Doe"
       contactWhatsApp: "",      // digits only, international format, e.g. "27821234567"
 
+      // Self-service sign-up links (leave "" to hide the button)
+      debitOrderLink: "",       // e-mandate link from your debit order provider (e.g. Netcash eMandate)
+      cardPaymentLink: "",      // recurring card subscription link (e.g. PayFast R100/month)
+
       // Group links (leave "" until you have a WhatsApp invite / page link)
       emergencyGroupLink: "",   // WhatsApp invite link for Emergency Charlo/B-Wood
       socialGroupLink: "",      // WhatsApp invite link for Social Charlo/Broadwood
@@ -365,6 +369,10 @@
               <li>
                 <h3>Set up your debit order</h3>
                 <p>We'll send you the banking details and a simple debit order authorisation. R100 a month, cancel any time.</p>
+                <p class="signup-links">
+                  <a class="btn btn-primary" data-signup="debitOrderLink" href="#" hidden>Set up my debit order online</a>
+                  <a class="btn btn-primary" data-signup="cardPaymentLink" href="#" hidden>Subscribe with my card</a>
+                </p>
               </li>
               <li>
                 <h3>That's it</h3>
@@ -640,6 +648,12 @@
         btn.textContent = "Message " + name + " on WhatsApp";
         btn.style.display = "";
       }
+
+      // Self-service sign-up buttons appear when their links are configured
+      document.querySelectorAll("[data-signup]").forEach(function (btn) {
+        const link = c[btn.dataset.signup];
+        if (link) { btn.href = link; btn.hidden = false; }
+      });
 
       // Group links: show the button and hide the fallback note when a link exists
       document.querySelectorAll("[data-grouplink]").forEach(function (btn) {

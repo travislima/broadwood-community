@@ -35,6 +35,8 @@ Everything that changes over time lives in **one block at the top of
 | `memberGoal` | Total properties in the area (currently 800). |
 | `contactName` | Name of the person who signs members up, e.g. `"Jane Doe"`. |
 | `contactWhatsApp` | Their WhatsApp number, digits only with country code, e.g. `"27821234567"`. Adds "Message … on WhatsApp" buttons with a pre-filled sign-up message. |
+| `debitOrderLink` | Self-service e-mandate link from the debit order provider (see `docs/membership-signup-options.md`). Shows a "Set up my debit order online" button when filled. |
+| `cardPaymentLink` | Recurring card subscription link (e.g. Payfast R100/month). Shows a "Subscribe with my card" button when filled. |
 | `emergencyGroupLink` | WhatsApp invite link for the Emergency group (Group info → Invite via link). |
 | `socialGroupLink` | WhatsApp invite link for the Social group. |
 | `facebookLink` | URL of the association's Facebook page. |
