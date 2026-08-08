@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Broadwood &amp; Charlo Residents' Association — We watch. Together we protect.</title>
+  <meta name="description" content="The Broadwood & Charlo Residents' Association (BCRA) keeps our Gqeberha (Port Elizabeth) neighbourhood safe and cared for — 15 security cameras, 24/7 monitoring, clean-ups and more. Join for just R100 a month.">
+  <meta property="og:title" content="Broadwood & Charlo Residents' Association">
+  <meta property="og:description" content="A safer neighbourhood starts with all of us. Join the BCRA for R100 a month and help us protect and improve Broadwood & Charlo.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 6 90 22v26c0 24-16 40-40 46C26 88 10 72 10 48V22Z' fill='%2316304f'/%3E%3Cpath d='M50 26 74 46h-8v20H56V52H44v14H34V46h-8Z' fill='%23f2a93b'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    /* =====================================================================
+       ✏️  EDIT HERE — everything that changes lives in this one block.
+       See the README for a plain-English guide to each field.
+       ===================================================================== */
+    const CONFIG = {
+      // Membership progress meter
+      paidMembers: 48,          // households currently paying by debit order
+      memberGoal: 800,          // total properties in the area
+
+      // Membership sign-up contact (leave "" to show a placeholder)
+      contactName: "",          // e.g. "Jane Doe"
+      contactWhatsApp: "",      // digits only, international format, e.g. "27821234567"
+
+      // Group links (leave "" until you have a WhatsApp invite / page link)
+      emergencyGroupLink: "",   // WhatsApp invite link for Emergency Charlo/B-Wood
+      socialGroupLink: "",      // WhatsApp invite link for Social Charlo/Broadwood
+      facebookLink: "",         // Facebook page URL
+
+      // Important local numbers (leave "" to show "to be added")
+      // Use plain digits with spaces, e.g. "041 123 4567" — tap-to-call is added automatically.
+      citywideNumber: "",       // CityWide Security control room
+      sapsStationNumber: "",    // nearest SAPS station (e.g. Walmer)
+      municipalityNumber: "",   // Nelson Mandela Bay municipality faults line
+
+      // Banking details for debit orders & once-off donations
+      bank: {
+        accountName: "",        // e.g. "Broadwood & Charlo Residents' Association"
+        bankName: "",           // e.g. "FNB"
+        accountNumber: "",
+        branchCode: "",
+        reference: ""           // e.g. "Your street name + number"
+      }
+    };
+  </script>
+</head>
+<body>
+
+  <!-- ============================ Header ============================ -->
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#top">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <path d="M50 6 90 22v26c0 24-16 40-40 46C26 88 10 72 10 48V22Z" fill="#16304f"/>
+          <path d="M50 26 74 46h-8v20H56V52H44v14H34V46h-8Z" fill="#f2a93b"/>
+        </svg>
+        <span>
+          BCRA
+          <span class="brand-sub">Broadwood &amp; Charlo Residents' Association</span>
+        </span>
+      </a>
+      <nav class="site-nav">
+        <a href="#what-we-do">What we do</a>
+        <a href="#groups">Groups</a>
+        <a class="nav-keep" href="#numbers">Numbers</a>
+        <a href="#faq">FAQ</a>
+        <a class="nav-cta" href="#join">Join for R100/m</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============================ Hero ============================ -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-copy">
+          <span class="tagline">We watch. Together we protect.</span>
+          <h1>A safer neighbourhood starts with all of&nbsp;us.</h1>
+          <p class="lede">
+            The Broadwood &amp; Charlo Residents' Association is run by your neighbours,
+            for your neighbours — keeping our corner of Gqeberha safe, clean and cared
+            for. With around 800 properties in our area, imagine what we could do together.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#join">Join for R100 a month</a>
+            <a class="btn btn-secondary" href="#groups">Join the WhatsApp groups</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <!-- Illustration: our neighbourhood at first light -->
+          <svg viewBox="0 0 720 500" width="720" height="500" role="img" aria-label="Illustration of a peaceful suburban neighbourhood at sunrise, with houses, trees and a security camera keeping watch">
+            <defs>
+              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#fdeecb"/>
+                <stop offset="0.55" stop-color="#fbd9a0"/>
+                <stop offset="1" stop-color="#f6c07c"/>
+              </linearGradient>
+              <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#8a94a5"/>
+                <stop offset="1" stop-color="#6e7889"/>
+              </linearGradient>
+            </defs>
+
+            <!-- sky -->
+            <rect x="20" y="20" width="680" height="400" rx="28" fill="url(#sky)"/>
+            <!-- sun -->
+            <circle cx="560" cy="130" r="46" fill="#f2a93b"/>
+            <circle cx="560" cy="130" r="60" fill="#f2a93b" opacity="0.25"/>
+            <!-- birds -->
+            <path d="M180 90q8-8 16 0M196 90q8-8 16 0" stroke="#8c6a3f" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M250 70q6-6 12 0M262 70q6-6 12 0" stroke="#8c6a3f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+            <!-- sea on the horizon -->
+            <rect x="20" y="208" width="680" height="18" fill="#7fb0c9" opacity="0.8"/>
+            <!-- distant hills -->
+            <path d="M20 226 Q140 168 260 220 Q380 176 500 218 Q610 182 700 222 L700 260 L20 260 Z" fill="#9dbb9a"/>
+
+            <!-- lawn -->
+            <path d="M20 252 L700 252 L700 420 L20 420 Z" fill="#b7cf9f"/>
+
+            <!-- ==== houses ==== -->
+            <!-- house 1 -->
+            <g>
+              <rect x="70" y="270" width="150" height="96" rx="4" fill="#fdf6ea"/>
+              <path d="M58 274 L145 216 L232 274 Z" fill="#c96f4a"/>
+              <rect x="96" y="300" width="30" height="30" rx="3" fill="#f2c063"/>
+              <path d="M96 315 h30 M111 300 v30" stroke="#fdf6ea" stroke-width="3"/>
+              <rect x="160" y="298" width="34" height="68" rx="3" fill="#4a6076"/>
+              <circle cx="188" cy="334" r="2.6" fill="#f2c063"/>
+            </g>
+            <!-- house 2 (taller, navy roof) -->
+            <g>
+              <rect x="280" y="248" width="170" height="118" rx="4" fill="#f6e7d3"/>
+              <path d="M268 252 L365 186 L462 252 Z" fill="#3f5975"/>
+              <rect x="306" y="278" width="32" height="32" rx="3" fill="#f2c063"/>
+              <path d="M306 294 h32 M322 278 v32" stroke="#f6e7d3" stroke-width="3"/>
+              <rect x="392" y="278" width="32" height="32" rx="3" fill="#f2c063"/>
+              <path d="M392 294 h32 M408 278 v32" stroke="#f6e7d3" stroke-width="3"/>
+              <rect x="348" y="300" width="36" height="66" rx="3" fill="#7a4f35"/>
+              <circle cx="378" cy="336" r="2.8" fill="#f2c063"/>
+            </g>
+            <!-- house 3 -->
+            <g>
+              <rect x="500" y="272" width="140" height="94" rx="4" fill="#fdf6ea"/>
+              <path d="M490 276 L570 220 L650 276 Z" fill="#c96f4a"/>
+              <rect x="522" y="300" width="28" height="28" rx="3" fill="#f2c063"/>
+              <path d="M522 314 h28 M536 300 v28" stroke="#fdf6ea" stroke-width="3"/>
+              <rect x="584" y="298" width="32" height="68" rx="3" fill="#4a6076"/>
+              <circle cx="610" cy="334" r="2.6" fill="#f2c063"/>
+            </g>
+
+            <!-- trees -->
+            <g>
+              <rect x="246" y="316" width="10" height="52" rx="4" fill="#7a5a3a"/>
+              <circle cx="251" cy="296" r="34" fill="#5e8f5e"/>
+              <circle cx="230" cy="312" r="22" fill="#6da06a"/>
+              <circle cx="272" cy="312" r="22" fill="#527f52"/>
+            </g>
+            <g>
+              <rect x="664" y="322" width="9" height="46" rx="4" fill="#7a5a3a"/>
+              <circle cx="668" cy="304" r="28" fill="#5e8f5e"/>
+              <circle cx="652" cy="318" r="18" fill="#6da06a"/>
+            </g>
+            <g>
+              <rect x="42" y="330" width="8" height="38" rx="4" fill="#7a5a3a"/>
+              <circle cx="46" cy="316" r="24" fill="#527f52"/>
+            </g>
+
+            <!-- street -->
+            <path d="M20 420 L700 420 L700 476 Q360 500 20 476 Z" fill="url(#road)"/>
+            <path d="M60 452 h56 M180 450 h56 M300 449 h56 M420 449 h56 M540 450 h56" stroke="#f2d9a8" stroke-width="5" stroke-linecap="round" stroke-dasharray="34 200"/>
+            <path d="M60 452 h40 M200 450 h40 M340 449 h40 M480 449 h40 M614 451 h40" stroke="#f2d9a8" stroke-width="5" stroke-linecap="round"/>
+
+            <!-- camera pole keeping watch -->
+            <g>
+              <rect x="474" y="300" width="8" height="122" rx="3" fill="#3c4654"/>
+              <rect x="452" y="288" width="44" height="20" rx="6" fill="#2c3644"/>
+              <circle cx="462" cy="298" r="5.5" fill="#9fd4ff"/>
+              <circle cx="462" cy="298" r="2.4" fill="#2c3644"/>
+              <path d="M482 288 L500 278 L500 284 L482 294 Z" fill="#2c3644"/>
+              <!-- watch beam -->
+              <path d="M456 306 L414 366 L500 366 Z" fill="#fff3d6" opacity="0.55"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ Stats ============================ -->
+    <section class="stats-band" aria-label="Association at a glance">
+      <div class="wrap">
+        <div class="stat">
+          <div class="stat-value">15</div>
+          <div class="stat-label">security cameras up and running</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">24/7</div>
+          <div class="stat-label">professional camera monitoring</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">900+</div>
+          <div class="stat-label">neighbours on our emergency group</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">R100</div>
+          <div class="stat-label">a month is all it takes to join</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ Progress ============================ -->
+    <section class="progress-section" id="progress">
+      <div class="wrap">
+        <div class="progress-card">
+          <span class="section-kicker">Our goal</span>
+          <h2>Every household counts.</h2>
+          <div class="progress-hero-number">
+            <span id="member-count">48</span>
+            <span class="of-goal">of <span id="member-goal">800</span> households</span>
+          </div>
+          <div class="progress-track" role="img" id="progress-track" aria-label="48 of 800 households have joined">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+          <div class="progress-legend">
+            <span>Members today</span>
+            <span>Goal: every property in Broadwood &amp; Charlo</span>
+          </div>
+          <p class="progress-note">
+            <strong id="member-count-2">48</strong> households currently contribute R100 a month —
+            that's what funds the 15 cameras and their monitoring. There are about
+            <strong><span id="member-goal-2">800</span> properties</strong> in Broadwood and Charlo.
+            More members simply means more cameras, faster response and better-kept
+            public spaces.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ What we do ============================ -->
+    <section id="what-we-do">
+      <div class="wrap">
+        <span class="section-kicker">What we do</span>
+        <h2>What your R100 pays for.</h2>
+        <p class="section-intro">
+          The association is run by volunteers who live here. Membership money goes
+          into the neighbourhood, not into salaries.
+        </p>
+        <div class="cards">
+          <div class="card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="13" height="10" rx="2"/><path d="M15 10.5 21 7v10l-6-3.5"/></svg>
+            </div>
+            <h3>Camera network</h3>
+            <p>15 security cameras already watch over our streets, professionally monitored 24/7. More members means more cameras covering more corners.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 20 5.5v5c0 5-3.2 8.6-8 10.5-4.8-1.9-8-5.5-8-10.5v-5Z"/><path d="m9 12 2 2 4-4.5"/></svg>
+            </div>
+            <h3>Crime prevention</h3>
+            <p>We work hand-in-hand with the SAPS, security companies and neighbourhood watch — helping the role players prevent and fight crime in our area.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4 0-7-3-7-7 0-5 4-9 7-11 3 2 7 6 7 11 0 4-3 7-7 7Z"/><path d="M12 21v-8l-3-3"/><path d="m12 16 3-3"/></svg>
+            </div>
+            <h3>Clean-ups &amp; maintenance</h3>
+            <p>Clearing high-risk overgrown areas, cutting back trees, and general upkeep that keeps the suburb looking good and criminals out of hiding spots.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="16.5" cy="9.5" r="2.5"/><path d="M2.5 20c.5-3.5 2.7-5.5 5.5-5.5S13 16.5 13.5 20"/><path d="M14.5 20c.4-2.6 1.6-4.3 3.5-4.7 1.7-.3 3.5 1 4 3.2"/></svg>
+            </div>
+            <h3>A connected community</h3>
+            <p>Active WhatsApp groups for emergencies and everyday neighbourhood life — over 900 residents already look out for one another.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ Join ============================ -->
+    <section class="join-section" id="join">
+      <div class="wrap">
+        <div class="join-grid">
+          <div>
+            <span class="section-kicker">Become a member</span>
+            <h2>Signing up takes five minutes.</h2>
+            <div class="price-tag">
+              <span class="price">R100</span>
+              <span class="per">per household, per month, by debit order</span>
+            </div>
+            <ol class="join-steps">
+              <li>
+                <h3>Get in touch</h3>
+                <p>Message our membership contact — <span id="contact-inline">details coming soon; in the meantime, ask any admin on the community WhatsApp groups</span>.</p>
+              </li>
+              <li>
+                <h3>Set up your debit order</h3>
+                <p>We'll send you the banking details and a simple debit order authorisation. R100 a month, cancel any time.</p>
+              </li>
+              <li>
+                <h3>That's it</h3>
+                <p>From your first debit order, your household is helping fund the cameras, monitoring and clean-ups for the whole area.</p>
+              </li>
+            </ol>
+            <a class="btn btn-whatsapp" id="contact-btn" href="#groups" style="display:none">Message us on WhatsApp</a>
+          </div>
+          <div>
+            <div class="bank-card">
+              <h3>Prefer a once-off contribution?</h3>
+              <p style="color: rgba(255,255,255,0.78); font-size: 0.95rem;">
+                Not everyone can commit monthly — moving away, tight month, or just want to
+                say thanks. Once-off donations of any size are hugely appreciated and go
+                straight into the same neighbourhood fund.
+              </p>
+              <dl>
+                <dt>Account name</dt><dd data-bank="accountName">To be confirmed</dd>
+                <dt>Bank</dt><dd data-bank="bankName">To be confirmed</dd>
+                <dt>Account number</dt><dd data-bank="accountNumber">To be confirmed</dd>
+                <dt>Branch code</dt><dd data-bank="branchCode">To be confirmed</dd>
+                <dt>Reference</dt><dd data-bank="reference">Your street name &amp; number</dd>
+              </dl>
+              <p class="bank-note">
+                Please use your street name and number as the reference so we know
+                which household to thank.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ Groups ============================ -->
+    <section id="groups">
+      <div class="wrap">
+        <span class="section-kicker">Stay connected</span>
+        <h2>Join the community groups.</h2>
+        <p class="section-intro">
+          Membership or not, every resident is welcome in the community groups.
+          They're free, and they're where the neighbourhood actually happens.
+        </p>
+        <div class="group-cards">
+          <div class="group-card">
+            <span class="group-tag tag-emergency">Emergency use only</span>
+            <h3>Emergency Charlo/B-Wood</h3>
+            <p>
+              Over 900 members strong. Strictly for emergencies — crime in progress,
+              suspicious activity, urgent alerts. No chatting, so when your phone
+              buzzes from this group, you know it matters.
+            </p>
+            <a class="btn btn-secondary" data-grouplink="emergencyGroupLink" href="#" hidden>Join the group</a>
+            <p class="group-fallback" style="font-size:0.85rem; color:var(--ink-muted); margin-bottom:0;"><em>To be added: ask a neighbour or any group admin to add you.</em></p>
+          </div>
+          <div class="group-card">
+            <span class="group-tag tag-social">Everyday chat</span>
+            <h3>Social Charlo/Broadwood</h3>
+            <p>
+              500+ neighbours talking about everything else — water and electricity
+              updates, neighbourhood watch, lost pets, local recommendations, and a
+              few jokes. Local businesses may advertise on Mondays and Fridays.
+            </p>
+            <a class="btn btn-secondary" data-grouplink="socialGroupLink" href="#" hidden>Join the group</a>
+            <p class="group-fallback" style="font-size:0.85rem; color:var(--ink-muted); margin-bottom:0;"><em>To be added: ask a neighbour or any group admin to add you.</em></p>
+          </div>
+          <div class="group-card">
+            <span class="group-tag tag-facebook">Facebook</span>
+            <h3>BCRA on Facebook</h3>
+            <p>
+              Follow the association on Facebook for news, photos from clean-ups,
+              and updates on what your contributions are funding.
+            </p>
+            <a class="btn btn-secondary" data-grouplink="facebookLink" href="#" hidden>Visit the page</a>
+            <p class="group-fallback" style="font-size:0.85rem; color:var(--ink-muted); margin-bottom:0;"><em>Page link coming soon.</em></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ Important numbers ============================ -->
+    <section id="numbers" class="numbers-section">
+      <div class="wrap">
+        <span class="section-kicker">Quick reference</span>
+        <h2>Important numbers.</h2>
+        <p class="section-intro">
+          Save this page — tap any number to call. In an emergency, also post on the
+          Emergency WhatsApp group so neighbours nearby can respond.
+        </p>
+        <div class="num-grid">
+          <a class="num-card" href="tel:10111">
+            <span class="num-label">SAPS emergency</span>
+            <span class="num-value">10111</span>
+            <span class="num-sub">Police, nationwide</span>
+          </a>
+          <a class="num-card" href="tel:112">
+            <span class="num-label">Any emergency (cellphone)</span>
+            <span class="num-value">112</span>
+            <span class="num-sub">Works on any network, even without airtime</span>
+          </a>
+          <a class="num-card" href="tel:10177">
+            <span class="num-label">Ambulance</span>
+            <span class="num-value">10177</span>
+            <span class="num-sub">Medical emergencies</span>
+          </a>
+          <a class="num-card" data-telcfg="citywideNumber" href="#">
+            <span class="num-label">CityWide Security</span>
+            <span class="num-value">To be added</span>
+            <span class="num-sub">Camera monitoring &amp; armed response</span>
+          </a>
+          <a class="num-card" data-telcfg="sapsStationNumber" href="#">
+            <span class="num-label">SAPS station (local)</span>
+            <span class="num-value">To be added</span>
+            <span class="num-sub">Our nearest police station</span>
+          </a>
+          <a class="num-card" data-telcfg="municipalityNumber" href="#">
+            <span class="num-label">Municipality faults</span>
+            <span class="num-value">To be added</span>
+            <span class="num-sub">Water, electricity &amp; roads — Nelson Mandela Bay</span>
+          </a>
+        </div>
+        <p class="num-note">
+          Partner: our cameras are monitored by
+          <a href="https://www.facebook.com/CityWideSecure/" rel="noopener">CityWide Security</a>, Walmer.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================ FAQ ============================ -->
+    <section id="faq">
+      <div class="wrap">
+        <span class="section-kicker">Questions</span>
+        <h2>Frequently asked questions.</h2>
+        <div class="faq-list">
+          <details>
+            <summary>What does my R100 a month actually pay for?</summary>
+            <p>
+              Camera hardware and maintenance, 24/7 professional monitoring, clearing
+              of high-risk overgrown areas, tree cutting, and supporting the people
+              who prevent and fight crime in our area. The association is run by
+              volunteers — your money funds the work, not salaries.
+            </p>
+          </details>
+          <details>
+            <summary>Who runs the association?</summary>
+            <p>
+              Your neighbours. The BCRA is a volunteer residents' association for the
+              Broadwood and Charlo suburbs of Gqeberha (Port Elizabeth), run by people
+              who live here and want the area to thrive.
+            </p>
+          </details>
+          <details>
+            <summary>I rent my home — can I still join?</summary>
+            <p>
+              Yes. Safety and a well-kept neighbourhood benefit everyone who lives
+              here, owner or tenant. Every household counts toward the goal.
+            </p>
+          </details>
+          <details>
+            <summary>I can't commit to a monthly debit order. Can I still help?</summary>
+            <p>
+              Yes — once-off donations of any amount are welcome and appreciated.
+              See the banking details in the membership section above. You can also
+              help simply by being active on the emergency group and looking out for
+              your neighbours.
+            </p>
+          </details>
+          <details>
+            <summary>Which WhatsApp group should I join?</summary>
+            <p>
+              Both! The <strong>Emergency</strong> group is strictly for urgent alerts —
+              keep notifications on. The <strong>Social</strong> group is for everything
+              else: municipal updates, questions, recommendations and community chatter.
+            </p>
+          </details>
+          <details>
+            <summary>Only 48 out of 800? Why should I bother?</summary>
+            <p>
+              Because those 48 households already fund 15 monitored cameras — with just
+              6% of the neighbourhood on board. That's the whole point: small, shared
+              contributions go a long way. Every new member makes the next camera and
+              the next clean-up possible.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ Final CTA ============================ -->
+    <section class="final-cta">
+      <div class="wrap">
+        <h2>Get behind your neighbourhood.</h2>
+        <p class="section-intro" style="margin-left:auto; margin-right:auto;">
+          Monitored cameras, cleaner public spaces and neighbours who look out for
+          each other — R100 a month keeps it going.
+        </p>
+        <a class="btn btn-primary" href="#join">Become a member</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================ Footer ============================ -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-brand">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <path d="M50 6 90 22v26c0 24-16 40-40 46C26 88 10 72 10 48V22Z" fill="#f2a93b"/>
+          <path d="M50 26 74 46h-8v20H56V52H44v14H34V46h-8Z" fill="#16304f"/>
+        </svg>
+        <span>Broadwood &amp; Charlo Residents' Association</span>
+      </div>
+      <div>
+        Broadwood &amp; Charlo, Gqeberha (Port Elizabeth), South Africa<br>
+        We watch. Together we protect.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ---- Everything below reads from CONFIG at the top of this file. ---- */
+    (function () {
+      const c = CONFIG;
+
+      // Membership progress
+      const pct = Math.max(0, Math.min(100, (c.paidMembers / c.memberGoal) * 100));
+      document.getElementById("member-count").textContent = c.paidMembers;
+      document.getElementById("member-count-2").textContent = c.paidMembers;
+      document.getElementById("member-goal").textContent = c.memberGoal;
+      document.getElementById("member-goal-2").textContent = c.memberGoal;
+      document.getElementById("progress-track").setAttribute(
+        "aria-label", c.paidMembers + " of " + c.memberGoal + " households have joined"
+      );
+      // Animate the bar in when it scrolls into view (min 2% so it's visible)
+      const fill = document.getElementById("progress-fill");
+      const target = Math.max(pct, 2) + "%";
+      new IntersectionObserver(function (entries, obs) {
+        if (entries[0].isIntersecting) {
+          fill.style.width = target;
+          obs.disconnect();
+        }
+      }, { threshold: 0.4 }).observe(fill);
+
+      // Membership contact
+      if (c.contactWhatsApp) {
+        const name = c.contactName || "our membership contact";
+        const msg = encodeURIComponent(
+          "Hi! I saw the BCRA website and I'd like to sign up as a member (R100/month)."
+        );
+        const url = "https://wa.me/" + c.contactWhatsApp + "?text=" + msg;
+        const inline = document.getElementById("contact-inline");
+        inline.innerHTML = "";
+        const link = document.createElement("a");
+        link.href = url;
+        link.textContent = (c.contactName ? c.contactName + " " : "") + "on WhatsApp";
+        inline.append("message ", link);
+        const btn = document.getElementById("contact-btn");
+        btn.href = url;
+        btn.textContent = "Message " + name + " on WhatsApp";
+        btn.style.display = "";
+      }
+
+      // Group links: show the button and hide the fallback note when a link exists
+      document.querySelectorAll("[data-grouplink]").forEach(function (btn) {
+        const link = c[btn.dataset.grouplink];
+        if (link) {
+          btn.href = link;
+          btn.hidden = false;
+          const fallback = btn.parentElement.querySelector(".group-fallback");
+          if (fallback) fallback.remove();
+        }
+      });
+
+      // Banking details
+      document.querySelectorAll("[data-bank]").forEach(function (dd) {
+        const value = c.bank[dd.dataset.bank];
+        if (value) dd.textContent = value;
+      });
+
+      // Important numbers: fill in configured numbers, make them tap-to-call
+      document.querySelectorAll("[data-telcfg]").forEach(function (card) {
+        const number = c[card.dataset.telcfg];
+        if (number) {
+          card.querySelector(".num-value").textContent = number;
+          card.href = "tel:" + number.replace(/\s+/g, "");
+        } else {
+          card.removeAttribute("href");
+          card.classList.add("num-pending");
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
