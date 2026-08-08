@@ -42,6 +42,7 @@ Everything that changes over time lives in **one block at the top of
 | `sapsStationNumber` | SAPS Walmer CSC — pre-filled with `041 581 0747` from the emergency group's rules. |
 | `municipalityNumber` | Nelson Mandela Bay faults/call-centre number. |
 | `bank.*` | Account name, bank, account number, branch code and suggested reference for debit orders and once-off donations. |
+| `photos` | Photos for the "Our neighbourhood" section. Upload images to an `images/` folder in this repo (on GitHub: **Add file → Upload files**), then add one line per photo: `{ src: "images/name.jpg", caption: "..." }`. The section stays hidden until at least one photo is listed. Use real photos from the community — clean-ups, streets, camera installations. Keep each under ~500 KB so the page stays fast. |
 
 Any field left as `""` shows a sensible placeholder ("To be confirmed" /
 "To be added") instead of a broken link — so the site is safe to publish

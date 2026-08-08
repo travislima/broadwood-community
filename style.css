@@ -22,6 +22,8 @@
 
 * { box-sizing: border-box; }
 
+[hidden] { display: none !important; }
+
 html { scroll-behavior: smooth; }
 
 body {
@@ -56,16 +58,6 @@ h3 { font-size: 1.15rem; font-weight: 600; font-family: var(--font-body); }
 }
 
 section { padding: 72px 0; }
-
-.section-kicker {
-  display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--amber-deep);
-  margin-bottom: 8px;
-}
 
 .section-intro {
   max-width: 640px;
@@ -218,6 +210,8 @@ section { padding: 72px 0; }
 
 .btn-whatsapp:hover { background: #3ede78; }
 
+.hero-copy { padding-bottom: 48px; }
+
 .hero-art { margin-bottom: -6px; }
 
 .hero-art svg { width: 100%; height: auto; }
@@ -353,14 +347,45 @@ section { padding: 72px 0; }
 .card p { color: var(--ink-muted); font-size: 0.94rem; margin: 0; }
 
 /* --------------------------------------------------------------------------
+   Our neighbourhood (photos)
+   -------------------------------------------------------------------------- */
+
+.photos-section { background: var(--card); border-top: 1px solid var(--line); }
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.photo-grid figure {
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.photo-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.photo-grid figcaption {
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+}
+
+/* --------------------------------------------------------------------------
    Join / membership
    -------------------------------------------------------------------------- */
 
 .join-section { background: var(--navy); color: #fff; }
 
 .join-section h2, .join-section h3 { color: #fff; }
-
-.join-section .section-kicker { color: var(--amber); }
 
 .join-grid {
   display: grid;
@@ -557,7 +582,11 @@ section { padding: 72px 0; }
    FAQ
    -------------------------------------------------------------------------- */
 
-.faq-list { max-width: 760px; }
+#faq .wrap { text-align: center; }
+
+#faq .section-intro { margin-left: auto; margin-right: auto; }
+
+.faq-list { max-width: 760px; margin: 0 auto; text-align: left; }
 
 .faq-list details {
   background: var(--card);

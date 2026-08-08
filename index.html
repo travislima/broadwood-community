@@ -41,12 +41,20 @@
 
       // Banking details for debit orders & once-off donations
       bank: {
-        accountName: "",        // e.g. "Broadwood & Charlo Residents' Association"
+        accountName: "",        // e.g. "Broadwood/Charlo Residents Association"
         bankName: "",           // e.g. "FNB"
         accountNumber: "",
         branchCode: "",
         reference: ""           // e.g. "Your street name + number"
-      }
+      },
+
+      // Photos of the neighbourhood. Upload images to the "images" folder on
+      // GitHub, then add a line per photo here. The section stays hidden
+      // until at least one photo is listed.
+      photos: [
+        // { src: "images/cleanup-2026.jpg", caption: "Community clean-up along the Baakens valley" },
+        // { src: "images/camera-pole.jpg",  caption: "One of our 15 monitored cameras" },
+      ]
     };
   </script>
 </head>
@@ -219,8 +227,7 @@
     <section class="progress-section" id="progress">
       <div class="wrap">
         <div class="progress-card">
-          <span class="section-kicker">Our goal</span>
-          <h2>Every household counts.</h2>
+          <h2>Where we stand</h2>
           <div class="progress-hero-number">
             <span id="member-count">48</span>
             <span class="of-goal">of <span id="member-goal">800</span> households</span>
@@ -246,8 +253,7 @@
     <!-- ============================ What we do ============================ -->
     <section id="what-we-do">
       <div class="wrap">
-        <span class="section-kicker">What we do</span>
-        <h2>What your R100 pays for.</h2>
+        <h2>What your R100 pays for</h2>
         <p class="section-intro">
           The association is run by volunteers who live here. Membership money goes
           into the neighbourhood, not into salaries.
@@ -285,13 +291,24 @@
       </div>
     </section>
 
+    <!-- ============================ Our neighbourhood ============================ -->
+    <section id="neighbourhood" class="photos-section" hidden>
+      <div class="wrap">
+        <h2>Our neighbourhood</h2>
+        <p class="section-intro">
+          Real photos from around Broadwood and Charlo — the streets, the people
+          and the work your contributions make possible.
+        </p>
+        <div class="photo-grid" id="photo-grid"></div>
+      </div>
+    </section>
+
     <!-- ============================ Join ============================ -->
     <section class="join-section" id="join">
       <div class="wrap">
         <div class="join-grid">
           <div>
-            <span class="section-kicker">Become a member</span>
-            <h2>Signing up takes five minutes.</h2>
+            <h2>Signing up takes five minutes</h2>
             <div class="price-tag">
               <span class="price">R100</span>
               <span class="per">per household, per month, by debit order</span>
@@ -340,8 +357,7 @@
     <!-- ============================ Groups ============================ -->
     <section id="groups">
       <div class="wrap">
-        <span class="section-kicker">Stay connected</span>
-        <h2>Join the community groups.</h2>
+        <h2>Join the community groups</h2>
         <p class="section-intro">
           Membership or not, every resident is welcome in the community groups.
           They're free, and they're where the neighbourhood actually happens.
@@ -388,8 +404,7 @@
     <!-- ============================ Important numbers ============================ -->
     <section id="numbers" class="numbers-section">
       <div class="wrap">
-        <span class="section-kicker">Quick reference</span>
-        <h2>Important numbers.</h2>
+        <h2>Important numbers</h2>
         <p class="section-intro">
           Save this page — tap any number to call. In an emergency, also post on the
           Emergency WhatsApp group so neighbours nearby can respond.
@@ -436,8 +451,8 @@
     <!-- ============================ FAQ ============================ -->
     <section id="faq">
       <div class="wrap">
-        <span class="section-kicker">Questions</span>
-        <h2>Frequently asked questions.</h2>
+        <h2>Frequently asked questions</h2>
+        <p class="section-intro">Something we haven't covered? Ask on the social WhatsApp group.</p>
         <div class="faq-list">
           <details>
             <summary>What does my R100 a month actually pay for?</summary>
@@ -496,7 +511,7 @@
     <!-- ============================ Final CTA ============================ -->
     <section class="final-cta">
       <div class="wrap">
-        <h2>Get behind your neighbourhood.</h2>
+        <h2>Get behind your neighbourhood</h2>
         <p class="section-intro" style="margin-left:auto; margin-right:auto;">
           Monitored cameras, cleaner public spaces and neighbours who look out for
           each other — R100 a month keeps it going.
@@ -582,6 +597,26 @@
         const value = c.bank[dd.dataset.bank];
         if (value) dd.textContent = value;
       });
+
+      // Neighbourhood photos: build the gallery, or keep the section hidden
+      if (c.photos && c.photos.length) {
+        const grid = document.getElementById("photo-grid");
+        c.photos.forEach(function (p) {
+          const fig = document.createElement("figure");
+          const img = document.createElement("img");
+          img.src = p.src;
+          img.alt = p.caption || "Photo of the Broadwood & Charlo neighbourhood";
+          img.loading = "lazy";
+          fig.appendChild(img);
+          if (p.caption) {
+            const cap = document.createElement("figcaption");
+            cap.textContent = p.caption;
+            fig.appendChild(cap);
+          }
+          grid.appendChild(fig);
+        });
+        document.getElementById("neighbourhood").hidden = false;
+      }
 
       // Important numbers: fill in configured numbers, make them tap-to-call
       document.querySelectorAll("[data-telcfg]").forEach(function (card) {
