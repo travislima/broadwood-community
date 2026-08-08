@@ -57,7 +57,7 @@ h3 { font-size: 1.15rem; font-weight: 600; font-family: var(--font-body); }
   padding: 0 24px;
 }
 
-section { padding: 72px 0; }
+section { padding: 88px 0; }
 
 .section-intro {
   max-width: 640px;
@@ -123,8 +123,8 @@ section { padding: 72px 0; }
 .site-nav .nav-cta {
   background: var(--pine);
   color: #fff;
-  padding: 8px 16px;
-  border-radius: 999px;
+  padding: 8px 18px;
+  border-radius: 8px;
   font-weight: 600;
 }
 
@@ -152,16 +152,20 @@ section { padding: 72px 0; }
 .hero-copy .tagline {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: var(--pine-tint);
-  color: var(--pine-soft);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  gap: 14px;
+  color: var(--brass-deep);
+  font-size: 0.8rem;
+  font-weight: 650;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  padding: 6px 14px;
-  border-radius: 999px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+}
+
+.hero-copy .tagline::before {
+  content: "";
+  width: 34px;
+  height: 2px;
+  background: var(--brass);
 }
 
 .hero-copy p.lede {
@@ -176,8 +180,8 @@ section { padding: 72px 0; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 13px 24px;
-  border-radius: 999px;
+  padding: 13px 26px;
+  border-radius: 10px;
   font-weight: 650;
   font-size: 0.98rem;
   text-decoration: none;
@@ -655,6 +659,38 @@ section { padding: 72px 0; }
 }
 
 /* --------------------------------------------------------------------------
+   Community quote
+   -------------------------------------------------------------------------- */
+
+.quote-section {
+  background: var(--card);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 76px 0;
+}
+
+.community-quote {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.community-quote p {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.6vw, 1.75rem);
+  line-height: 1.45;
+  color: var(--pine);
+  margin: 0 0 20px;
+}
+
+.community-quote cite {
+  font-style: normal;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-muted);
+}
+
+/* --------------------------------------------------------------------------
    Final CTA + footer
    -------------------------------------------------------------------------- */
 
@@ -664,26 +700,55 @@ section { padding: 72px 0; }
 
 .site-footer {
   background: var(--pine);
-  color: rgba(255, 255, 255, 0.75);
-  padding: 40px 0;
-  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.72);
+  padding: 56px 0 48px;
+  font-size: 0.9rem;
 }
 
-.site-footer .wrap {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-  align-items: center;
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.2fr;
+  gap: 40px;
+  align-items: start;
 }
+
+.site-footer h4 {
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+}
+
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li { margin-bottom: 10px; line-height: 1.5; }
 
 .site-footer a { color: var(--brass); text-decoration: none; }
 
 .site-footer a:hover { text-decoration: underline; }
 
-.footer-brand { display: flex; align-items: center; gap: 10px; color: #fff; font-weight: 650; }
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-weight: 650;
+  line-height: 1.25;
+}
 
-.footer-brand svg { width: 30px; height: 30px; }
+.footer-brand svg { width: 38px; height: 38px; flex-shrink: 0; }
+
+.footer-slogan { margin: 16px 0 0; font-size: 0.88rem; }
+
+@media (max-width: 700px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+}
 
 /* --------------------------------------------------------------------------
    Small screens
@@ -691,7 +756,7 @@ section { padding: 72px 0; }
 
 @media (max-width: 600px) {
   body { font-size: 16px; }
-  section { padding: 52px 0; }
+  section { padding: 60px 0; }
   .wrap { padding: 0 18px; }
   .hero { padding-top: 36px; }
   .hero-actions .btn { width: 100%; justify-content: center; }
@@ -703,5 +768,4 @@ section { padding: 72px 0; }
   .bank-card { padding: 20px 18px; }
   .bank-card dl { grid-template-columns: 1fr; gap: 2px; }
   .bank-card dt { margin-top: 10px; }
-  .site-footer .wrap { flex-direction: column; align-items: flex-start; }
 }
