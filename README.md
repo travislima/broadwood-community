@@ -1,4 +1,4 @@
-# Broadwood & Charlo Residents' Association — website
+# Broadwood/Charlo Residents Association — website
 
 A single-page brochure site for the BCRA (Broadwood & Charlo, Gqeberha / Port
 Elizabeth). It encourages residents to join the association at R100 a month,
@@ -39,7 +39,7 @@ Everything that changes over time lives in **one block at the top of
 | `socialGroupLink` | WhatsApp invite link for the Social group. |
 | `facebookLink` | URL of the association's Facebook page. |
 | `citywideNumber` | CityWide Security control room number, e.g. `"041 123 4567"`. |
-| `sapsStationNumber` | Nearest SAPS station number. |
+| `sapsStationNumber` | SAPS Walmer CSC — pre-filled with `041 581 0747` from the emergency group's rules. |
 | `municipalityNumber` | Nelson Mandela Bay faults/call-centre number. |
 | `bank.*` | Account name, bank, account number, branch code and suggested reference for debit orders and once-off donations. |
 
@@ -49,15 +49,14 @@ before all the details are in.
 
 ### Before going live — checklist
 
-- [ ] Confirm the association's full name is correct ("Broadwood & Charlo
-      Residents' Association" is currently assumed from the BCRA acronym).
 - [ ] Get the committee's permission before publishing anyone's name or
       phone number, and fill in `contactName` / `contactWhatsApp`.
 - [ ] Fill in the banking details (`bank.*`) — verify them with the treasurer.
 - [ ] Add the WhatsApp group invite links, or leave the "ask an admin" fallback.
-- [ ] Verify the CityWide control-room and SAPS station numbers by phoning
-      them, then fill them in. (National numbers 10111 / 112 / 10177 are
-      already on the site.)
+- [ ] Fill in the CityWide control-room and municipality numbers after
+      verifying them by phone. The SAPS Walmer CSC number (041 581 0747)
+      comes from the emergency group's rules — worth a quick verification
+      call too. (National numbers 10111 / 112 / 10177 are already on the site.)
 - [ ] Update `paidMembers` whenever the count changes — it's the single most
       persuasive number on the page.
 
