@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
+<style>
+  html, body { height: 100%; margin: 0; }
+  #map { height: 100%; background: #ece7da; }
+  .leaflet-tile-pane { filter: sepia(0.22) saturate(0.82) brightness(1.03) contrast(0.96); }
+  .area-label { font: 700 11px/1.2 'Karla', 'Helvetica Neue', sans-serif; letter-spacing: 0.22em; color: #274634; text-shadow: 0 0 3px #fff, 0 1px 4px rgba(255,255,255,0.9); white-space: nowrap; text-align: center; }
+  .leaflet-control-attribution { font-size: 9px; background: rgba(255,253,248,0.8); }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+  var map = L.map('map', { scrollWheelZoom: false, zoomControl: true, attributionControl: true })
+    .setView([-33.9895, 25.5510], 14);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors', maxZoom: 18 }).addTo(map);
+  L.circle([-33.9905, 25.5515], { radius: 1250, color: '#274634', weight: 2, opacity: 0.55, dashArray: '6 6', fillColor: '#3c6a4c', fillOpacity: 0.08 }).addTo(map);
+  function label(lat, lng, text) {
+    L.marker([lat, lng], { icon: L.divIcon({ className: 'area-label', html: text, iconSize: [120, 14], iconAnchor: [60, 7] }), interactive: false }).addTo(map);
+  }
+  label(-33.9868, 25.5485, 'CHARLO');
+  label(-33.9955, 25.5545, 'BROADWOOD');
+</script>
+</body>
+</html>
