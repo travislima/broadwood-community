@@ -49,8 +49,8 @@
       },
 
       // Photos of the neighbourhood. Upload images to the "images" folder on
-      // GitHub, then add a line per photo here. The section stays hidden
-      // until at least one photo is listed.
+      // GitHub, then add a line per photo here. As soon as one photo is
+      // listed, a swipeable gallery replaces the illustration at the top.
       photos: [
         // { src: "images/cleanup-2026.jpg", caption: "Community clean-up along the Baakens valley" },
         // { src: "images/camera-pole.jpg",  caption: "One of our 15 monitored cameras" },
@@ -103,6 +103,11 @@
           </div>
         </div>
         <div class="hero-art">
+          <div class="hero-carousel" id="hero-carousel" hidden>
+            <div class="carousel-track" id="carousel-track"></div>
+            <div class="carousel-dots" id="carousel-dots" aria-hidden="true"></div>
+          </div>
+          <div id="hero-illustration">
           <!-- Illustration: an established Broadwood street in late-afternoon light -->
           <svg viewBox="0 0 720 500" width="720" height="500" role="img" aria-label="Illustration of an established, leafy Broadwood street: character family homes with tiled roofs, mature shade trees and a quiet road through the green Baakens valley">
             <defs>
@@ -234,6 +239,7 @@
               <path d="M378 307 L346 350 L412 350 Z" fill="#f6e8bd" opacity="0.45"/>
             </g>
           </svg>
+          </div>
         </div>
       </div>
     </section>
@@ -325,18 +331,6 @@
             <p>Active WhatsApp groups for emergencies and everyday neighbourhood life — over 900 residents already look out for one another.</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ============================ Our neighbourhood ============================ -->
-    <section id="neighbourhood" class="photos-section" hidden>
-      <div class="wrap">
-        <h2>Our neighbourhood</h2>
-        <p class="section-intro">
-          Real photos from around Broadwood and Charlo — the streets, the people
-          and the work your contributions make possible.
-        </p>
-        <div class="photo-grid" id="photo-grid"></div>
       </div>
     </section>
 
@@ -635,24 +629,35 @@
         if (value) dd.textContent = value;
       });
 
-      // Neighbourhood photos: build the gallery, or keep the section hidden
+      // Neighbourhood photos: swap the hero illustration for a swipeable gallery
       if (c.photos && c.photos.length) {
-        const grid = document.getElementById("photo-grid");
-        c.photos.forEach(function (p) {
+        const track = document.getElementById("carousel-track");
+        const dots = document.getElementById("carousel-dots");
+        c.photos.forEach(function (p, i) {
           const fig = document.createElement("figure");
           const img = document.createElement("img");
           img.src = p.src;
           img.alt = p.caption || "Photo of the Broadwood & Charlo neighbourhood";
-          img.loading = "lazy";
+          if (i > 0) img.loading = "lazy";
           fig.appendChild(img);
           if (p.caption) {
             const cap = document.createElement("figcaption");
             cap.textContent = p.caption;
             fig.appendChild(cap);
           }
-          grid.appendChild(fig);
+          track.appendChild(fig);
+          const dot = document.createElement("span");
+          dot.className = "dot" + (i === 0 ? " active" : "");
+          dots.appendChild(dot);
         });
-        document.getElementById("neighbourhood").hidden = false;
+        track.addEventListener("scroll", function () {
+          const i = Math.round(track.scrollLeft / track.clientWidth);
+          dots.querySelectorAll(".dot").forEach(function (d, j) {
+            d.classList.toggle("active", j === i);
+          });
+        }, { passive: true });
+        document.getElementById("hero-illustration").hidden = true;
+        document.getElementById("hero-carousel").hidden = false;
       }
 
       // Important numbers: fill in configured numbers, make them tap-to-call

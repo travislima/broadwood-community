@@ -347,37 +347,64 @@ section { padding: 72px 0; }
 .card p { color: var(--ink-muted); font-size: 0.94rem; margin: 0; }
 
 /* --------------------------------------------------------------------------
-   Our neighbourhood (photos)
+   Hero photo carousel (shows in place of the illustration once photos exist)
    -------------------------------------------------------------------------- */
 
-.photos-section { background: var(--card); border-top: 1px solid var(--line); }
+.hero-carousel { position: relative; padding-bottom: 26px; }
 
-.photo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 18px;
-}
-
-.photo-grid figure {
-  margin: 0;
-  border-radius: var(--radius);
-  overflow: hidden;
-  background: var(--paper);
-  border: 1px solid var(--line);
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  border-radius: 28px;
   box-shadow: var(--shadow);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
 }
 
-.photo-grid img {
+.carousel-track::-webkit-scrollbar { display: none; }
+
+.carousel-track figure {
+  position: relative;
+  flex: 0 0 100%;
+  margin: 0;
+  scroll-snap-align: center;
+}
+
+.carousel-track img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  display: block;
 }
 
-.photo-grid figcaption {
-  padding: 12px 16px;
+.carousel-track figcaption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 28px 20px 14px;
+  background: linear-gradient(transparent, rgba(20, 30, 22, 0.72));
+  color: #fff;
   font-size: 0.88rem;
-  color: var(--ink-muted);
 }
+
+.carousel-dots {
+  position: absolute;
+  bottom: 4px;
+  left: 0; right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+
+.carousel-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--line);
+  transition: background 0.15s ease;
+}
+
+.carousel-dots .dot.active { background: var(--brass); }
 
 /* --------------------------------------------------------------------------
    Join / membership
