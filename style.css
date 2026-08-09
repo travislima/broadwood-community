@@ -715,7 +715,7 @@ img, svg, iframe { max-width: 100%; }
 
 .group-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 22px;
 }
 
@@ -727,6 +727,7 @@ img, svg, iframe { max-width: 100%; }
 }
 
 .group-card.emergency { border-top: 3px solid var(--terracotta); }
+.group-card.security { border-top: 3px solid #52705f; }
 .group-card.social { border-top: 3px solid var(--green); }
 .group-card.facebook { border-top: 3px solid var(--gold); }
 
@@ -742,6 +743,7 @@ img, svg, iframe { max-width: 100%; }
 }
 
 .group-card.emergency .group-tag { color: var(--terracotta); background: #f3e2dc; }
+.group-card.security .group-tag { color: #43604f; background: var(--tint); }
 .group-card.social .group-tag { color: var(--green); background: var(--tint-2); }
 .group-card.facebook .group-tag { color: #7d5a1d; background: #f0e7d2; }
 
@@ -770,6 +772,8 @@ img, svg, iframe { max-width: 100%; }
 
 .group-card.emergency .group-btn { background: var(--terracotta); color: #fdf6ee; }
 .group-card.emergency .group-btn:hover { background: #8a3121; color: #ffffff; }
+.group-card.security .group-btn { background: #52705f; color: var(--cream); }
+.group-card.security .group-btn:hover { background: #3e574a; color: #ffffff; }
 .group-card.social .group-btn { background: var(--green); color: var(--cream); }
 .group-card.social .group-btn:hover { background: var(--green-dark); color: #ffffff; }
 .group-card.facebook .group-btn { background: var(--gold); color: #fdf6ee; }

@@ -19,14 +19,26 @@
 <div id="map"></div>
 <script>
   var map = L.map('map', { scrollWheelZoom: false, zoomControl: true, attributionControl: true })
-    .setView([-33.9895, 25.5510], 14);
+    .setView([-33.9870, 25.5510], 14);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors', maxZoom: 18 }).addTo(map);
-  L.circle([-33.9905, 25.5515], { radius: 1250, color: '#274634', weight: 2, opacity: 0.55, dashArray: '6 6', fillColor: '#3c6a4c', fillOpacity: 0.08 }).addTo(map);
+  // Patrol area per the association's map: Circular Dr / rail line in the
+  // north-west, along Carrington Rd to William Moffett (M12) in the east,
+  // Buffelsfontein Rd (M9) along the south, Melsetter/Bernard Rd in the west.
+  var boundary = L.polygon([
+    [-33.9718, 25.5368],  // NW: Circular Drive at the rail line
+    [-33.9800, 25.5530],  // along Carrington Rd
+    [-33.9818, 25.5660],  // NE: M12 at Springfield Rd
+    [-33.9938, 25.5655],  // east: down William Moffett to the M9
+    [-33.9975, 25.5505],  // south: along Buffelsfontein Rd (M9)
+    [-34.0002, 25.5390],  // SW: Buffelsfontein at Melsetter Rd
+    [-33.9900, 25.5368]   // west: up Melsetter / Bernard Rd
+  ], { color: '#274634', weight: 2, opacity: 0.55, dashArray: '6 6', fillColor: '#3c6a4c', fillOpacity: 0.08 }).addTo(map);
+  map.fitBounds(boundary.getBounds(), { padding: [10, 10] });
   function label(lat, lng, text) {
     L.marker([lat, lng], { icon: L.divIcon({ className: 'area-label', html: text, iconSize: [120, 14], iconAnchor: [60, 7] }), interactive: false }).addTo(map);
   }
-  label(-33.9868, 25.5485, 'CHARLO');
-  label(-33.9955, 25.5545, 'BROADWOOD');
+  label(-33.9790, 25.5460, 'CHARLO');
+  label(-33.9900, 25.5490, 'BROADWOOD');
 </script>
 </body>
 </html>

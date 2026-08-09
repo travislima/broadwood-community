@@ -48,7 +48,8 @@ Everything that changes over time lives in **one block at the top of
 | `contactWhatsApp` | The membership contact's WhatsApp number, digits only with country code, e.g. `"27821234567"`. Once set, every Join button and both "Request to be added" buttons become WhatsApp deep links with pre-filled messages. Until then, Join buttons scroll to the membership section and a "details coming soon" note shows. |
 | `debitOrderLink` | Self-service e-mandate link from the debit order provider (see `docs/membership-signup-options.md`). Shows a "Set up my debit order online" button when filled. |
 | `cardPaymentLink` | Recurring card subscription link (e.g. Payfast R100/month). Shows a "Subscribe with my card" button when filled. |
-| `emergencyGroupLink` / `socialGroupLink` | Optional WhatsApp invite links (Group info → Invite via link). If set, the group button links straight to the group; otherwise it falls back to a pre-filled "please add me" WhatsApp message (needs `contactWhatsApp`). |
+| `emergencyGroupLink` / `securityGroupLink` / `socialGroupLink` | Optional WhatsApp invite links (Group info → Invite via link). If set, the group button links straight to the group; otherwise it falls back to a pre-filled "please add me" WhatsApp message (needs `contactWhatsApp`). |
+| `annualDonors` | Households that supported the association with once-off/annual donations this past year. Shows a thank-you line in the donations panel; leave `0` to hide it until the committee provides the number. |
 | `citywideNumber` | CityWide Security control room number, e.g. `"041 123 4567"`. Fills the dashed card and makes it tap-to-call. |
 | `sapsStationNumber` | SAPS Walmer CSC — pre-filled with `041 581 0747` from the emergency group's rules. |
 | `municipalityNumber` | Nelson Mandela Bay faults/call-centre number. |

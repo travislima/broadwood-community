@@ -39,7 +39,11 @@
 
       // Group links (leave "" to fall back to the WhatsApp request message)
       emergencyGroupLink: "",   // WhatsApp invite link for Emergency Charlo/B-Wood
+      securityGroupLink: "",    // WhatsApp invite link for Broadwood Security Discussion
       socialGroupLink: "",      // WhatsApp invite link for Social Charlo/Broadwood
+
+      // Donations
+      annualDonors: 0,          // households that gave once-off/annual donations (0 hides the line)
 
       // Important local numbers (leave "" to show a dashed "to be added" card)
       // Use plain digits with spaces, e.g. "041 123 4567" — tap-to-call is added automatically.
@@ -258,6 +262,7 @@
         <div class="donate-card">
           <h3>Prefer a once-off contribution?</h3>
           <p class="donate-copy">Not everyone can commit monthly — moving away, tight month, or just want to say thanks. Once-off donations of any size are hugely appreciated and go straight into the same neighbourhood fund.</p>
+          <p class="donate-copy" id="donor-count" hidden><strong><span data-val="donors">0</span> households</strong> supported us with once-off or annual donations this past year — thank you.</p>
           <p class="ref-note">Please use your street name and number as the reference so we know which household to thank.</p>
           <dl>
             <dt>Account name</dt><dd data-bank="accountName">To be confirmed</dd>
@@ -287,6 +292,13 @@
           <a class="group-btn" data-group="Emergency Charlo/B-Wood" data-invite="emergencyGroupLink" href="#" hidden>Request to be added</a>
           <p class="group-fallback">Or ask a neighbour or any group admin.</p>
         </div>
+        <div class="group-card security">
+          <p class="group-tag">Security chat</p>
+          <h3>Broadwood Security Discussion</h3>
+          <p class="group-desc">General security discussions that aren't urgent — patrol feedback, camera and incident follow-ups, safety concerns and NHW coordination. Emergencies still belong on the Emergency group.</p>
+          <a class="group-btn" data-group="Broadwood Security Discussion" data-invite="securityGroupLink" href="#" hidden>Request to be added</a>
+          <p class="group-fallback">Or ask a neighbour or any group admin.</p>
+        </div>
         <div class="group-card social">
           <p class="group-tag">Everyday chat</p>
           <h3>Social Charlo/Broadwood</h3>
@@ -309,7 +321,7 @@
     <p class="eyebrow">Important numbers</p>
     <div class="section-head">
       <h2>Save this page. Tap any number to call.</h2>
-      <p>In an emergency, also post on the Emergency WhatsApp group so neighbours nearby can respond.</p>
+      <p>In an emergency, also post on the Emergency WhatsApp group — NHW members monitor it 24/7, and neighbours nearby can respond.</p>
     </div>
     <div class="num-grid">
       <a class="num-card" href="tel:10111">
@@ -343,7 +355,7 @@
         <p class="num-sub">Water, electricity &amp; roads — Nelson Mandela Bay</p>
       </a>
     </div>
-    <p class="partner-note">Partner: our cameras are monitored by <a href="https://www.facebook.com/CityWideSecure/" target="_blank" rel="noopener">CityWide Security</a>, Walmer.</p>
+    <p class="partner-note">Partners: our cameras are monitored by <strong>Broadwood AfriForum NHW</strong> and <a href="https://www.facebook.com/CityWideSecure/" target="_blank" rel="noopener">CityWide Security</a>, Walmer.</p>
   </section>
 
   <!-- ============================ FAQ ============================ -->
@@ -375,7 +387,7 @@
       </details>
       <details>
         <summary>Which WhatsApp group should I join?</summary>
-        <p>Both! The <strong>Emergency</strong> group is strictly for urgent alerts — keep notifications on. The <strong>Social</strong> group is for everything else: municipal updates, questions, recommendations and community chatter.</p>
+        <p>All three! The <strong>Emergency</strong> group is strictly for immediate alerts where assistance is required from the NHW, security companies, SAPS or AMS services — keep notifications on. The <strong>Broadwood Security Discussion</strong> group is for general security discussions. The <strong>Social</strong> group is for everything else: municipal updates, questions, recommendations and community chatter.</p>
       </details>
       <details>
         <summary>Only <span data-val="members">48</span> out of <span data-val="goal">800</span>? Why should I bother?</summary>
@@ -439,8 +451,10 @@
         members: members,
         goal: goal,
         cameras: cameras,
+        donors: c.annualDonors,
         pctLabel: (Math.round(pct * 10) / 10) + "%"
       };
+      if (c.annualDonors > 0) document.getElementById("donor-count").hidden = false;
       document.querySelectorAll("[data-val]").forEach(function (el) {
         el.textContent = vals[el.dataset.val];
       });
