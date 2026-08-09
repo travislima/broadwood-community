@@ -25,20 +25,21 @@
   // north-west, along Carrington Rd to William Moffett (M12) in the east,
   // Buffelsfontein Rd (M9) along the south, Melsetter/Bernard Rd in the west.
   var boundary = L.polygon([
-    [-33.9718, 25.5368],  // NW: Circular Drive at the rail line
-    [-33.9800, 25.5530],  // along Carrington Rd
-    [-33.9818, 25.5660],  // NE: M12 at Springfield Rd
-    [-33.9938, 25.5655],  // east: down William Moffett to the M9
-    [-33.9975, 25.5505],  // south: along Buffelsfontein Rd (M9)
-    [-34.0002, 25.5390],  // SW: Buffelsfontein at Melsetter Rd
-    [-33.9900, 25.5368]   // west: up Melsetter / Bernard Rd
+    [-33.9700, 25.5262],  // NW: Circular Drive at the rail line
+    [-33.9808, 25.5410],  // bend where the Carrington Rd diagonal ends
+    [-33.9802, 25.5527],  // north edge east of Walter Rd
+    [-33.9823, 25.5663],  // NE: M12 (William Moffett) at Springfield Rd
+    [-33.9941, 25.5664],  // east: William Moffett down to Buffelsfontein (M9)
+    [-33.9974, 25.5486],  // Buffelsfontein Rd, mid bend
+    [-34.0017, 25.5312],  // SW: Buffelsfontein at Melsetter Rd
+    [-33.9905, 25.5287]   // west: kink on Melsetter Rd, then up Bernard Rd
   ], { color: '#274634', weight: 2, opacity: 0.55, dashArray: '6 6', fillColor: '#3c6a4c', fillOpacity: 0.08 }).addTo(map);
   map.fitBounds(boundary.getBounds(), { padding: [10, 10] });
   function label(lat, lng, text) {
     L.marker([lat, lng], { icon: L.divIcon({ className: 'area-label', html: text, iconSize: [120, 14], iconAnchor: [60, 7] }), interactive: false }).addTo(map);
   }
-  label(-33.9790, 25.5460, 'CHARLO');
-  label(-33.9900, 25.5490, 'BROADWOOD');
+  label(-33.9830, 25.5560, 'CHARLO');
+  label(-33.9888, 25.5377, 'BROADWOOD');
 </script>
 </body>
 </html>
