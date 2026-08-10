@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Broadwood/Charlo Residents Association — Together we watch. Together we protect.</title>
-  <meta name="description" content="The Broadwood/Charlo Residents Association (BCRA) keeps our Gqeberha (Port Elizabeth) neighbourhood safe and cared for — 15 security cameras, 24/7 monitoring, clean-ups and more. Join for just R100 a month.">
+  <meta name="description" content="The Broadwood/Charlo Residents Association (BCRA) keeps our Gqeberha (Port Elizabeth) neighbourhood safe and cared for — 15 actively monitored security cameras, clean-ups and more. Join for just R100 a month.">
   <meta property="og:title" content="Broadwood/Charlo Residents Association">
   <meta property="og:description" content="A safer neighbourhood starts with all of us. Join the BCRA for R100 a month and help us protect and improve Broadwood and Charlo.">
   <meta property="og:type" content="website">
@@ -23,7 +23,7 @@
        ===================================================================== */
     const CONFIG = {
       // Membership progress meter
-      paidMembers: 48,          // households currently paying by debit order
+      paidMembers: 52,          // households currently paying by debit order
       memberGoal: 800,          // total properties in the area
       cameraCount: 15,          // monitored cameras up and running
 
@@ -43,8 +43,13 @@
       socialGroupLink: "",      // WhatsApp invite link for Social Charlo/Broadwood
 
       // Donations
-      annualDonors: 0,          // households that gave once-off/annual donations
+      annualDonors: 30,         // households that gave once-off/annual donations
                                 // (0 shows a generic thank-you; a number makes it specific)
+
+      // Sign-up forms (upload PDFs to a "forms" folder, then point these at
+      // them, e.g. "forms/debit-order.pdf" — buttons appear once set)
+      debitOrderFormUrl: "",    // monthly debit order form
+      donationFormUrl: "",      // once-off donation form (12-month reminder)
 
       // Important local numbers (leave "" to show a dashed "to be added" card)
       // Use plain digits with spaces, e.g. "041 123 4567" — tap-to-call is added automatically.
@@ -126,8 +131,8 @@
         <p class="stat-label">security cameras up and running</p>
       </div>
       <div class="stat">
-        <p class="stat-value">24/7</p>
-        <p class="stat-label">professional camera monitoring</p>
+        <p class="stat-value">Active</p>
+        <p class="stat-label">camera monitoring, with professional help sponsored by CityWide</p>
       </div>
       <div class="stat">
         <p class="stat-value">900+</p>
@@ -181,7 +186,7 @@
         </div>
         <div>
           <h3>Camera network</h3>
-          <p><span data-val="cameras">15</span> security cameras already watch over our streets, professionally monitored 24/7. More members means more cameras covering more corners.</p>
+          <p><span data-val="cameras">15</span> security cameras already watch over our streets — actively monitored, with professional support sponsored by CityWide Security. More members means more cameras covering more corners.</p>
         </div>
       </div>
       <div class="pays-card">
@@ -245,8 +250,9 @@
             <p class="step-num">2</p>
             <div>
               <h3>Set up your debit order</h3>
-              <p>We'll send you the banking details and a simple debit order authorisation. R100 a month, cancel any time.</p>
+              <p>Fill in the debit order form and you're set. R100 a month, cancel any time.</p>
               <p class="signup-links">
+                <a class="btn-cream" data-signup="debitOrderFormUrl" href="#" hidden>Get the debit order form</a>
                 <a class="btn-cream" data-signup="debitOrderLink" href="#" hidden>Set up my debit order online</a>
                 <a class="btn-cream" data-signup="cardPaymentLink" href="#" hidden>Subscribe with my card</a>
               </p>
@@ -266,6 +272,9 @@
           <p class="donate-copy" id="donor-count"><strong><span data-val="donors">0</span> households</strong> supported us with once-off or annual donations this past year — thank you.</p>
           <p class="donate-copy" id="donor-generic">Thank you to every household that already supports us with once-off and annual donations — it all goes into the same work.</p>
           <p class="ref-note">Please use your street name and number as the reference so we know which household to thank.</p>
+          <p class="signup-links" style="margin: 18px 0 0;">
+            <a class="btn-cream" data-signup="donationFormUrl" href="#" hidden>Get the donation form</a>
+          </p>
           <dl>
             <dt>Account name</dt><dd data-bank="accountName">To be confirmed</dd>
             <dt>Bank</dt><dd data-bank="bankName">To be confirmed</dd>
@@ -357,7 +366,7 @@
         <p class="num-sub">Water, electricity &amp; roads — Nelson Mandela Bay</p>
       </a>
     </div>
-    <p class="partner-note">Partners: our cameras are monitored by <strong>Broadwood AfriForum NHW</strong> and <a href="https://www.facebook.com/CityWideSecure/" target="_blank" rel="noopener">CityWide Security</a>, Walmer.</p>
+    <p class="partner-note">Partners: our cameras are actively monitored by <strong>Broadwood AfriForum NHW</strong>, with professional support sponsored by <a href="https://www.facebook.com/CityWideSecure/" target="_blank" rel="noopener">CityWide Security</a>, Walmer.</p>
   </section>
 
   <!-- ============================ FAQ ============================ -->
@@ -368,7 +377,7 @@
     <div class="faq-list">
       <details>
         <summary>What does my R100 a month actually pay for?</summary>
-        <p>Camera hardware and maintenance, 24/7 professional monitoring, clearing of high-risk overgrown areas, tree cutting, and supporting the people who prevent and fight crime in our area. The association is run by volunteers — your money funds the work, not salaries.</p>
+        <p>Camera hardware and maintenance, active camera monitoring, clearing of high-risk overgrown areas, tree cutting, and supporting the people who prevent and fight crime in our area. The association is run by volunteers — your money funds the work, not salaries.</p>
       </details>
       <details>
         <summary>How do I know the money is well spent?</summary>

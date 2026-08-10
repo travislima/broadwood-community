@@ -46,6 +46,7 @@ Everything that changes over time lives in **one block at the top of
 | `memberGoal` | Total properties in the area (currently 800). |
 | `cameraCount` | Monitored cameras up and running (currently 15). |
 | `contactWhatsApp` | The membership contact's WhatsApp number, digits only with country code, e.g. `"27821234567"`. Once set, every Join button and both "Request to be added" buttons become WhatsApp deep links with pre-filled messages. Until then, Join buttons scroll to the membership section and a "details coming soon" note shows. |
+| `debitOrderFormUrl` / `donationFormUrl` | The association's sign-up forms. Upload the PDFs to a `forms/` folder in this repo, then set e.g. `"forms/debit-order.pdf"` — "Get the … form" buttons appear in the membership section. |
 | `debitOrderLink` | Self-service e-mandate link from the debit order provider (see `docs/membership-signup-options.md`). Shows a "Set up my debit order online" button when filled. |
 | `cardPaymentLink` | Recurring card subscription link (e.g. Payfast R100/month). Shows a "Subscribe with my card" button when filled. |
 | `emergencyGroupLink` / `securityGroupLink` / `socialGroupLink` | Optional WhatsApp invite links (Group info → Invite via link). If set, the group button links straight to the group; otherwise it falls back to a pre-filled "please add me" WhatsApp message (needs `contactWhatsApp`). |

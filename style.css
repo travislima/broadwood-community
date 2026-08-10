@@ -651,7 +651,7 @@ img, svg, iframe { max-width: 100%; }
 
 .btn-cream:hover { background: #ffffff; color: var(--green-dark); }
 
-.join-step .signup-links {
+.join-section .signup-links {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
