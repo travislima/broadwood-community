@@ -51,9 +51,7 @@ Everything that changes over time lives in **one block at the top of
 | `cardPaymentLink` | Recurring card subscription link (e.g. Payfast R100/month). Shows a "Subscribe with my card" button when filled. |
 | `emergencyGroupLink` / `securityGroupLink` / `socialGroupLink` | Optional WhatsApp invite links (Group info → Invite via link). If set, the group button links straight to the group; otherwise it falls back to a pre-filled "please add me" WhatsApp message (needs `contactWhatsApp`). |
 | `annualDonors` | Households that supported the association with once-off/annual donations this past year. At `0` the donations panel shows a generic thank-you; set the real number (ask the committee) and the line becomes specific, e.g. "23 households supported us…". |
-| `citywideNumber` | CityWide Security control room number, e.g. `"041 123 4567"`. Fills the dashed card and makes it tap-to-call. |
 | `sapsStationNumber` | SAPS Walmer CSC — pre-filled with `041 581 0747` from the emergency group's rules. |
-| `municipalityNumber` | Nelson Mandela Bay faults/call-centre number. |
 | `bank.*` | Account name, bank, account number and branch code for debit orders and once-off donations. |
 
 Any field left as `""` shows a sensible placeholder ("To be confirmed" /
@@ -68,9 +66,10 @@ link — so the site is safe to publish before all the details are in.
       membership & donation form.
 - [x] Sign-up forms — both PDFs live in `forms/` and linked from the
       membership section.
-- [ ] Fill in the CityWide control-room and municipality numbers after
-      verifying them by phone. The SAPS Walmer CSC number (041 581 0747)
-      comes from the emergency group's rules — worth a verification call too.
+- [ ] Verify the SAPS Walmer CSC number (041 581 0747) with a quick call —
+      it comes from the emergency group's rules. (CityWide and municipality
+      number cards were removed for launch; they can be re-added later as
+      extra cards in the Important numbers section.)
 - [ ] Confirm the milestone labels (100 / 200 / 400 households) and the
       "How do I know the money is well spent?" FAQ wording with the
       committee — the FAQ has a "to be confirmed" note to remove.
