@@ -636,6 +636,8 @@ img, svg, iframe { max-width: 100%; }
   color: var(--sage);
 }
 
+.join-step p a { color: var(--gold-on-dark); }
+
 .join-step p.has-btn { margin-bottom: 16px; }
 
 .btn-cream {

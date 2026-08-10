@@ -60,18 +60,23 @@ Any field left as `""` shows a sensible placeholder ("To be confirmed" /
 dashed "To be added" card / "ask an admin" fallback) instead of a broken
 link — so the site is safe to publish before all the details are in.
 
-### Before going live — checklist
+### Launch checklist
 
-- [ ] Set `contactWhatsApp` to the real membership number (get the
-      committee's permission first). **Do not launch a join campaign
-      without this** — it's the whole funnel.
-- [ ] Fill in the banking details (`bank.*`) — verify them with the treasurer.
+- [x] `contactWhatsApp` — set to 083 200 5932 (bcramembership), from the
+      association's official forms.
+- [x] Banking details — Bidvest Bank business account, from the official
+      membership & donation form.
+- [x] Sign-up forms — both PDFs live in `forms/` and linked from the
+      membership section.
 - [ ] Fill in the CityWide control-room and municipality numbers after
       verifying them by phone. The SAPS Walmer CSC number (041 581 0747)
       comes from the emergency group's rules — worth a verification call too.
 - [ ] Confirm the milestone labels (100 / 200 / 400 households) and the
       "How do I know the money is well spent?" FAQ wording with the
       committee — the FAQ has a "to be confirmed" note to remove.
+- [ ] Ask the committee for a Netcash eMandate link (they use Netcash
+      DebiCheck) and set `debitOrderLink` — residents could then sign up
+      fully online without printing the form.
 - [ ] Update `paidMembers` whenever the count changes — it's the single
       most persuasive number on the page.
 

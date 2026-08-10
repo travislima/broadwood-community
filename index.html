@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Broadwood/Charlo Residents Association — Together we watch. Together we protect.</title>
-  <meta name="description" content="The Broadwood/Charlo Residents Association (BCRA) keeps our Gqeberha (Port Elizabeth) neighbourhood safe and cared for — 15 actively monitored security cameras, clean-ups and more. Join for just R100 a month.">
-  <meta property="og:title" content="Broadwood/Charlo Residents Association">
+  <title>Broadwood Charlo Residents Association — Together we watch. Together we protect.</title>
+  <meta name="description" content="The Broadwood Charlo Residents Association (BCRA) keeps our Gqeberha (Port Elizabeth) neighbourhood safe and cared for — 15 actively monitored security cameras, clean-ups and more. Join for just R100 a month.">
+  <meta property="og:title" content="Broadwood Charlo Residents Association">
   <meta property="og:description" content="A safer neighbourhood starts with all of us. Join the BCRA for R100 a month and help us protect and improve Broadwood and Charlo.">
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#274634">
@@ -31,7 +31,7 @@
       // Digits only, international format, e.g. "27821234567". Every Join
       // and "Request to be added" button becomes a WhatsApp deep link with
       // a pre-filled message as soon as this is set.
-      contactWhatsApp: "",
+      contactWhatsApp: "27832005932", // 083 200 5932 — bcramembership, from the official forms
 
       // Self-service sign-up links (leave "" to hide the button)
       debitOrderLink: "",       // e-mandate link from your debit order provider (e.g. Netcash eMandate)
@@ -48,8 +48,8 @@
 
       // Sign-up forms (upload PDFs to a "forms" folder, then point these at
       // them, e.g. "forms/debit-order.pdf" — buttons appear once set)
-      debitOrderFormUrl: "",    // monthly debit order form
-      donationFormUrl: "",      // once-off donation form (12-month reminder)
+      debitOrderFormUrl: "forms/bcra-debit-order-mandate.pdf",    // monthly debit order form
+      donationFormUrl: "forms/bcra-membership-donation-form.pdf", // once-off donation form (reviewed annually)
 
       // Important local numbers (leave "" to show a dashed "to be added" card)
       // Use plain digits with spaces, e.g. "041 123 4567" — tap-to-call is added automatically.
@@ -59,10 +59,10 @@
 
       // Banking details for debit orders & once-off donations
       bank: {
-        accountName: "",        // e.g. "Broadwood/Charlo Residents Association"
-        bankName: "",           // e.g. "FNB"
-        accountNumber: "",
-        branchCode: ""
+        accountName: "Broadwood Charlo Residents Association",
+        bankName: "Bidvest Bank (Business Account)",
+        accountNumber: "33694911401",
+        branchCode: "462005"
       }
     };
   </script>
@@ -241,7 +241,7 @@
             <p class="step-num">1</p>
             <div>
               <h3>Get in touch</h3>
-              <p class="has-btn" data-contact-copy>Message our membership contact on WhatsApp — the message is pre-filled, just add your street name and number.</p>
+              <p class="has-btn" data-contact-copy>Message our membership contact on WhatsApp — the message is pre-filled, just add your street name and number. Prefer email? Write to <a href="mailto:bcramembership@gmail.com">bcramembership@gmail.com</a>.</p>
               <a class="btn-cream" data-join href="#" hidden>Message us on WhatsApp</a>
               <p class="group-fallback" data-contact-fallback>Contact details coming soon — in the meantime, ask any admin on the community WhatsApp groups.</p>
             </div>
@@ -268,10 +268,10 @@
         </div>
         <div class="donate-card">
           <h3>Prefer a once-off contribution?</h3>
-          <p class="donate-copy">Not everyone can commit monthly — moving away, tight month, or just want to say thanks. Once-off donations of any size are hugely appreciated and go straight into the same neighbourhood fund.</p>
+          <p class="donate-copy">Not everyone can commit monthly — moving away, tight month, or just want to say thanks. Once-off donations of any size are hugely appreciated and go straight into the same neighbourhood fund. Donations are reviewed annually — we send a friendly reminder after 12 months.</p>
           <p class="donate-copy" id="donor-count"><strong><span data-val="donors">0</span> households</strong> supported us with once-off or annual donations this past year — thank you.</p>
           <p class="donate-copy" id="donor-generic">Thank you to every household that already supports us with once-off and annual donations — it all goes into the same work.</p>
-          <p class="ref-note">Please use your street name and number as the reference so we know which household to thank.</p>
+          <p class="ref-note">Please use your initials and surname as the payment reference, exactly as on the form.</p>
           <p class="signup-links" style="margin: 18px 0 0;">
             <a class="btn-cream" data-signup="donationFormUrl" href="#" hidden>Get the donation form</a>
           </p>
@@ -280,7 +280,7 @@
             <dt>Bank</dt><dd data-bank="bankName">To be confirmed</dd>
             <dt>Account number</dt><dd data-bank="accountNumber">To be confirmed</dd>
             <dt>Branch code</dt><dd data-bank="branchCode">To be confirmed</dd>
-            <dt>Reference</dt><dd class="ref-value">Your street name &amp; number</dd>
+            <dt>Reference</dt><dd class="ref-value">Your initials &amp; surname</dd>
           </dl>
         </div>
       </div>
@@ -386,7 +386,7 @@
       </details>
       <details>
         <summary>Who runs the association?</summary>
-        <p>Your neighbours. The Broadwood/Charlo Residents Association is a volunteer association for the Broadwood and Charlo suburbs of Gqeberha (Port Elizabeth), run by people who live here and want the area to thrive.</p>
+        <p>Your neighbours. The Broadwood Charlo Residents Association is a volunteer association for the Broadwood and Charlo suburbs of Gqeberha (Port Elizabeth), run by people who live here and want the area to thrive.</p>
       </details>
       <details>
         <summary>I rent my home — can I still join?</summary>
@@ -419,7 +419,7 @@
           <rect x="22" y="33" width="20" height="14" fill="#c9932f"/>
           <rect x="29" y="40" width="6" height="7" fill="#f2ead4"/>
         </svg>
-        <p class="footer-name">Broadwood/Charlo<br>Residents Association</p>
+        <p class="footer-name">Broadwood Charlo<br>Residents Association</p>
         <p class="footer-slogan">Together we watch. Together we protect.<br>Secure today, safe tomorrow.</p>
       </div>
       <div>
@@ -436,6 +436,8 @@
         <p class="footer-heading">Find us</p>
         <div class="footer-links">
           <span>Broadwood &amp; Charlo,<br>Gqeberha (Port Elizabeth), South Africa</span>
+          <a href="mailto:bcramembership@gmail.com">bcramembership@gmail.com</a>
+          <a href="tel:0832005932">083 200 5932</a>
           <a href="https://www.facebook.com/Broadwood.charlo/" target="_blank" rel="noopener">Facebook: Broadwood/Charlo Community</a>
         </div>
       </div>
