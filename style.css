@@ -4,6 +4,13 @@
    ========================================================================== */
 
 :root {
+  /* Logo hues, sampled from the BCRA hands mark */
+  --logo-red: #df5a54;
+  --logo-orange: #dc8c51;
+  --logo-yellow: #d9b95e;
+  --logo-green: #51966a;
+  --logo-blue: #5e7ab6;
+  --logo-purple: #674580;
   --cream: #f7f3ea;
   --card: #fffdf8;
   --ink: #202b22;
@@ -120,7 +127,15 @@ img, svg, iframe { max-width: 100%; }
 
 .brand:hover { color: var(--ink); }
 
-.brand svg { display: block; flex: none; }
+.brand-logo { display: block; flex: none; width: 40px; height: auto; }
+
+.unity-strip {
+  height: 3px;
+  background: linear-gradient(90deg,
+    var(--logo-red) 0 16.7%, var(--logo-orange) 16.7% 33.3%,
+    var(--logo-yellow) 33.3% 50%, var(--logo-green) 50% 66.7%,
+    var(--logo-blue) 66.7% 83.3%, var(--logo-purple) 83.3% 100%);
+}
 
 .brand-name {
   display: flex;
@@ -490,6 +505,15 @@ img, svg, iframe { max-width: 100%; }
   margin-bottom: 18px;
 }
 
+.pays-card:nth-child(1) .icon-chip { background: #e6ebf5; }
+.pays-card:nth-child(1) .icon-chip svg { stroke: #46609c; }
+.pays-card:nth-child(2) .icon-chip { background: #e4efe7; }
+.pays-card:nth-child(2) .icon-chip svg { stroke: #2f6a47; }
+.pays-card:nth-child(3) .icon-chip { background: #f9e6e4; }
+.pays-card:nth-child(3) .icon-chip svg { stroke: #a4432f; }
+.pays-card:nth-child(4) .icon-chip { background: #ece5f2; }
+.pays-card:nth-child(4) .icon-chip svg { stroke: #5b3d72; }
+
 .pays-card h3 {
   margin: 0 0 8px;
   font-family: "Lora", serif;
@@ -636,7 +660,7 @@ img, svg, iframe { max-width: 100%; }
   color: var(--sage);
 }
 
-.join-step p a { color: var(--gold-on-dark); }
+.join-step p a:not(.btn-cream) { color: var(--gold-on-dark); }
 
 .join-step p.has-btn { margin-bottom: 16px; }
 
@@ -728,10 +752,10 @@ img, svg, iframe { max-width: 100%; }
   background: var(--cream);
 }
 
-.group-card.emergency { border-top: 3px solid var(--terracotta); }
-.group-card.security { border-top: 3px solid #52705f; }
-.group-card.social { border-top: 3px solid var(--green); }
-.group-card.facebook { border-top: 3px solid var(--gold); }
+.group-card.emergency { border-top: 3px solid var(--logo-red); }
+.group-card.security { border-top: 3px solid var(--logo-blue); }
+.group-card.social { border-top: 3px solid var(--logo-green); }
+.group-card.facebook { border-top: 3px solid var(--logo-yellow); }
 
 .group-tag {
   margin: 0 0 12px;
@@ -745,7 +769,7 @@ img, svg, iframe { max-width: 100%; }
 }
 
 .group-card.emergency .group-tag { color: var(--terracotta); background: #f3e2dc; }
-.group-card.security .group-tag { color: #43604f; background: var(--tint); }
+.group-card.security .group-tag { color: #3d5488; background: #e6ebf5; }
 .group-card.social .group-tag { color: var(--green); background: var(--tint-2); }
 .group-card.facebook .group-tag { color: #7d5a1d; background: #f0e7d2; }
 
@@ -774,8 +798,8 @@ img, svg, iframe { max-width: 100%; }
 
 .group-card.emergency .group-btn { background: var(--terracotta); color: #fdf6ee; }
 .group-card.emergency .group-btn:hover { background: #8a3121; color: #ffffff; }
-.group-card.security .group-btn { background: #52705f; color: var(--cream); }
-.group-card.security .group-btn:hover { background: #3e574a; color: #ffffff; }
+.group-card.security .group-btn { background: #46609c; color: #ffffff; }
+.group-card.security .group-btn:hover { background: #384e80; color: #ffffff; }
 .group-card.social .group-btn { background: var(--green); color: var(--cream); }
 .group-card.social .group-btn:hover { background: var(--green-dark); color: #ffffff; }
 .group-card.facebook .group-btn { background: var(--gold); color: #fdf6ee; }
@@ -937,7 +961,18 @@ a.num-card:hover { border-color: var(--gold); }
   border-bottom: 1px solid rgba(242, 234, 212, 0.15);
 }
 
-.site-footer .footer-logo { display: block; margin-bottom: 12px; }
+.footer-logo-disc {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--cream-text);
+  margin-bottom: 12px;
+}
+
+.footer-logo-disc img { width: 34px; height: auto; }
 
 .site-footer .footer-name {
   margin: 0 0 8px;
