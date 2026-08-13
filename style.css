@@ -147,6 +147,7 @@ img, svg, iframe { max-width: 100%; }
   font-family: "Lora", serif;
   font-weight: 600;
   font-size: 16px;
+  color: #35853b; /* letterhead green, deepened just enough to keep AA contrast */
 }
 
 .brand-name .brand-sub {
@@ -811,6 +812,38 @@ img, svg, iframe { max-width: 100%; }
   font-style: italic;
   color: var(--muted);
 }
+
+.nhw-banner {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--logo-green);
+  border-radius: 14px;
+  padding: 22px 26px;
+  background: var(--cream);
+}
+
+.nhw-banner h3 {
+  margin: 0 0 6px;
+  font-family: "Lora", serif;
+  font-weight: 600;
+  font-size: 19px;
+}
+
+.nhw-banner p {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--body);
+  max-width: 62ch;
+}
+
+.nhw-btn { background: #2f6a47; color: #ffffff; flex: none; }
+.nhw-btn:hover { background: #245237; color: #ffffff; }
 
 /* --------------------------------------------------------------------------
    Important numbers
