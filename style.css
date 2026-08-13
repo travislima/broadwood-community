@@ -834,12 +834,14 @@ img, svg, iframe { max-width: 100%; }
   font-size: 19px;
 }
 
+.nhw-banner > div { flex: 1 1 420px; }
+
 .nhw-banner p {
   margin: 0;
   font-size: 14.5px;
   line-height: 1.6;
   color: var(--body);
-  max-width: 62ch;
+  text-wrap: pretty;
 }
 
 .nhw-btn { background: #2f6a47; color: #ffffff; flex: none; }
