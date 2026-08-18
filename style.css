@@ -145,16 +145,16 @@ img, svg, iframe { max-width: 100%; }
 
 .brand-name .brand-top {
   font-family: "Lora", serif;
-  font-weight: 600;
-  font-size: 16px;
-  color: #35853b; /* letterhead green, deepened just enough to keep AA contrast */
+  font-weight: 700;
+  font-size: 19px; /* large-text size so the letterhead green passes WCAG at 3:1 */
+  color: #3f9a46;  /* the letterhead green, minimally deepened */
 }
 
 .brand-name .brand-sub {
   font-size: 10.5px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #5f6b5f;
+  color: #2e7434; /* letterhead green, deepened for AA at small size */
 }
 
 #nav-links {

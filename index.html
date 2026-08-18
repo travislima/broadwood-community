@@ -22,8 +22,9 @@
        See the README for a plain-English guide to each field.
        ===================================================================== */
     const CONFIG = {
-      // Membership progress meter
-      paidMembers: 52,          // households currently paying by debit order
+      // Membership progress meter — the site shows paidMembers + annualDonors
+      // as the total contributing households (currently 52 + 30 = 82)
+      paidMembers: 52,          // households paying by monthly debit order
       memberGoal: 800,          // total properties in the area
       cameraCount: 15,          // monitored cameras up and running
 
@@ -126,7 +127,7 @@
       </div>
       <div class="stat">
         <p class="stat-value">Active</p>
-        <p class="stat-label">camera monitoring, with professional help sponsored by CityWide</p>
+        <p class="stat-label">camera monitoring by Broadwood AfriForum NHW, with professional help sponsored by CityWide</p>
       </div>
       <div class="stat">
         <p class="stat-value">900+</p>
@@ -144,7 +145,7 @@
     <p class="eyebrow">Where we stand</p>
     <div class="progress-head">
       <h2><span data-val="members">48</span> households carry the whole neighbourhood. Imagine <span data-val="goal">800</span>.</h2>
-      <p><strong><span data-val="members">48</span> households</strong> currently contribute R100 a month — that's what funds the <span data-val="cameras">15</span> cameras and their monitoring. There are about <strong><span data-val="goal">800</span> properties</strong> in our area. More members simply means more cameras, faster response and better-kept public spaces.</p>
+      <p><strong><span data-val="members">82</span> households</strong> currently contribute — <span data-val="debit">52</span> by monthly debit order and <span data-val="donors">30</span> through annual donations — and that's what funds the <span data-val="cameras">15</span> cameras and their monitoring. There are about <strong><span data-val="goal">800</span> properties</strong> in our area. More members simply means more cameras, faster response and better-kept public spaces.</p>
     </div>
     <div class="progress-card">
       <div class="card-head">
@@ -180,7 +181,7 @@
         </div>
         <div>
           <h3>Camera network</h3>
-          <p><span data-val="cameras">15</span> security cameras already watch over our streets — actively monitored, with professional support sponsored by CityWide Security — and six more are being installed. More members means more cameras, placed where they count — entry and exit points first, then proven hotspots.</p>
+          <p><span data-val="cameras">15</span> security cameras already watch over our streets — actively monitored by the Broadwood AfriForum NHW, with professional support sponsored by CityWide Security — and six more are being installed. More members means more cameras, placed where they count — entry and exit points first, then proven hotspots.</p>
         </div>
       </div>
       <div class="pays-card">
@@ -399,7 +400,7 @@
       </details>
       <details>
         <summary>Only <span data-val="members">48</span> out of <span data-val="goal">800</span>? Why should I bother?</summary>
-        <p>Because those <span data-val="members">48</span> households already fund <span data-val="cameras">15</span> monitored cameras, with another six being installed — and that's with just <span data-val="pctLabel">6%</span> of the neighbourhood on board. That's the whole point: small, shared contributions go a long way. Every new member makes the next camera and the next clean-up possible.</p>
+        <p>Because those <span data-val="members">82</span> households already fund <span data-val="cameras">15</span> monitored cameras, with another six being installed — and that's with just <span data-val="pctLabel">10%</span> of the neighbourhood on board. That's the whole point: small, shared contributions go a long way. Every new member makes the next camera and the next clean-up possible.</p>
       </details>
     </div>
   </section>
@@ -448,7 +449,7 @@
     /* ---- Everything below reads from CONFIG at the top of this file. ---- */
     (function () {
       const c = CONFIG;
-      const members = c.paidMembers;
+      const members = c.paidMembers + c.annualDonors;
       const goal = c.memberGoal;
       const cameras = c.cameraCount;
       const pct = Math.max(0, Math.min(100, (members / goal) * 100));
@@ -457,6 +458,7 @@
         members: members,
         goal: goal,
         cameras: cameras,
+        debit: c.paidMembers,
         donors: c.annualDonors,
         pctLabel: (Math.round(pct * 10) / 10) + "%"
       };
