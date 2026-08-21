@@ -26,13 +26,15 @@ hosted free on GitHub Pages and edited by hand.
    choose the `main` branch and the `/ (root)` folder, and save.
 3. After a minute the site is live at `https://<username>.github.io/broadwood-community/`.
 
-### Custom domain (optional)
+### Custom domain
 
-1. Buy a domain (e.g. `bcra.org.za`).
-2. In **Settings → Pages → Custom domain**, enter the domain and follow
-   GitHub's DNS instructions (a CNAME record pointing to
-   `<username>.github.io`).
-3. Tick **Enforce HTTPS** once the certificate is issued.
+The site's custom domain is **broadwoodcharlo.co.za** (the `CNAME` file in
+this repo). DNS at the registrar: four A records on the apex pointing to
+GitHub Pages (185.199.108.153 / .109. / .110. / .111.) and a `www` CNAME
+record pointing to `travislima.github.io`. In **Settings → Pages**, the
+custom domain should show as verified with **Enforce HTTPS** ticked. If
+the domain ever lapses or moves, the site remains reachable at
+`https://travislima.github.io/broadwood-community/`.
 
 ## How to update the site
 
