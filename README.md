@@ -81,6 +81,15 @@ link — so the site is safe to publish before all the details are in.
 - [ ] Update `paidMembers` whenever the count changes — it's the single
       most persuasive number on the page.
 
+## Analytics
+
+The site runs [Microsoft Clarity](https://clarity.microsoft.com) (project
+`y717yw3qhf`, snippet in the head of `index.html`) — free click heatmaps,
+scroll maps, session recordings and basic traffic stats. Committee members
+are invited under the project's **Settings → Team** (no GitHub access
+needed to view dashboards). A disclosure line lives in the site footer;
+remove it if Clarity is ever removed.
+
 ## Editing anything else
 
 - All page text is plain HTML in `index.html`, organised into clearly
