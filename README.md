@@ -87,8 +87,8 @@ The site runs [Microsoft Clarity](https://clarity.microsoft.com) (project
 `y717yw3qhf`, snippet in the head of `index.html`) — free click heatmaps,
 scroll maps, session recordings and basic traffic stats. Committee members
 are invited under the project's **Settings → Team** (no GitHub access
-needed to view dashboards). A disclosure line lives in the site footer;
-remove it if Clarity is ever removed.
+needed to view dashboards). A disclosure line in the site footer links to `privacy.html` (a short
+POPIA-friendly privacy notice); remove both if Clarity is ever removed.
 
 ## Editing anything else
 

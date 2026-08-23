@@ -1052,6 +1052,9 @@ a.num-card:hover { border-color: var(--gold); }
   color: #aab59a;
 }
 
+.footer-line a { color: var(--gold-on-dark); text-decoration: underline; }
+.footer-line a:hover { color: #ffffff; }
+
 /* --------------------------------------------------------------------------
    Mobile sticky join bar
    -------------------------------------------------------------------------- */
